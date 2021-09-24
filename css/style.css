@@ -1,0 +1,334 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+html, body {
+    height: 100%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size:15px;
+    color:#333;
+    font-weight:400;
+}
+a{
+    color:#333;
+   text-decoration:none;
+}
+ul{
+	list-style:none;
+}
+img{
+	max-width:100%;
+}
+.title-area{
+    text-align: center;
+}
+.title{
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.right{
+    position: absolute;
+    background-color: red;
+    height: 4px;
+    width: 100px;
+    right:calc(100% + 10px);/*left theke 100% sore jabe*/
+    top: 50%;/*top theke 50% pore shuru hobe*/
+    margin-top: -2px;
+}
+.left{
+    position: absolute;
+    background-color: red;
+    height: 4px;
+    width: 100px;
+    left:calc(100% + 10px);/*left theke 100% sore jabe*/
+    top: 50%;/*top theke 50% pore shuru hobe*/
+    margin-top: -2px;
+}
+
+/*2nd title*/
+.title2{
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.title2::before{
+    content: "";
+    width: 100px;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+    left:calc(100% + 10px);
+    top: 50%;
+    margin-top: -2px;
+}
+.title2::after{
+    content: "";
+    width: 100px;
+    height: 4px;
+    background-color: red;
+    position: absolute;
+    right:calc(100% + 10px);
+    top: 50%;
+    margin-top: -2px;
+}
+
+/*list design*/
+ul.list{
+    margin-left: 200px;
+}
+ul.list li{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+ul.list li::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background:red;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: 0.3s;
+}
+ul.list li:hover::before{
+    transform: translateY(-50%) rotate(0);
+}
+
+/*list-2 design*/
+ul.list2{
+    margin-left: 200px;
+}
+ul.list2 li{
+    position: relative;
+    font-size: 50px;
+}
+ul.list2 li::before{
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;/*font awesome free ar ketre font weight minimum 700 dite hobe*/
+    position: absolute;
+    font-size: 40px;
+    top: 10px;
+    left: -25px;
+    color: red;
+    transition: 0.5s;
+}
+ul.list2 li:hover::before{
+    content: "\f00c";
+    left: -40px;
+}
+
+.section-title{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.text span{
+    color: green;
+}
+.text{
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+}
+.text::after{
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    right: 0;
+    left: calc(50% + 35px);
+    height: 4px;
+    background: #000;
+}
+.text::before{
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    right: calc(50% + 35px);
+    height: 4px;
+    background: #000;
+}
+.bullet{
+    width: 10px;
+    height: 10px;
+    background-color:green;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%) rotate(45deg);
+    bottom: -20px;
+}
+.bullet2{
+    width: 10px;
+    height: 10px;
+    background-color:pink;
+    position: absolute;
+    left: 50%;
+    transform:translateX(calc(-50% + 18px)) rotate(45deg);
+    bottom: -20px;
+}
+.bullet3{
+    width: 10px;
+    height: 10px;
+    background-color:blue;
+    position: absolute;
+    left: 50%;
+    transform:translateX(calc(-50% - 18px)) rotate(45deg);
+    bottom: -20px;
+}
+
+
+
+/*another design style*/
+.main{
+    margin: auto;
+    width:300px;
+    height: 300px;
+    background-color: #000;
+    position: relative;
+    margin-bottom: 200px;
+    transition: 3s;
+}
+.main:hover{
+    background-color: green;
+}
+.box-1{
+    width: 80px;
+    height: 80px;
+    background-color:red;
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    transition: 3s;
+}
+.main:hover .box-1{
+    right: 0;
+    bottom: 0;
+}
+.box-2{
+    width: 80px;
+    height: 80px;
+    background-color:green;
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    transition: 3s;
+}
+.main:hover .box-2{
+    left: 0;
+    top: 0;
+    background-color: #000;
+}
+.box-3{
+    width: 80px;
+    height: 80px;
+    background-color:blue;
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    transition: 3s;
+}
+.main:hover .box-3{
+    bottom: 0;
+    left: 0;
+}
+.box-4{
+    width: 80px;
+    height: 80px;
+    background-color:pink;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    transition: 3s;
+}
+.main:hover .box-4{
+    top: 0;
+    right: 0;
+}
+
+.box-5{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 3s;
+}
+.main:hover .box-5{
+    background-color:red;
+}
+
+
+
+.flag{
+    width: 700px;
+    height: 400px;
+    background-color:green;
+    margin: auto;
+    margin-bottom: 200px;
+    position: relative;
+}
+.circle{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 3s;
+}
+.flag:hover .circle{
+    transform:translate(-50%,-50%) scale(1.5);
+}
+
+
+
+.element{
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.element img{
+    max-width: 100%;
+}
+.ele-title{
+    position: absolute;
+    background-color:red;
+    bottom: -200px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    transition: 3s;
+}
+.element:hover .ele-title{
+    bottom: 200px;
+}
+
+
+.hello{
+    color: #000;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.hello i{
+    font-size: 50px;
+}
